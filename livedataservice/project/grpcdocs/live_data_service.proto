@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+message OddsApiInfo {
+    string event_id = 1;
+    string sport = 2;
+    string market = 3;
+}
+
+message FeedIDReturn {
+    string uuid = 1;
+}
+
+message FeedIDRequest {
+    string uuid = 1;
+}
+
+message Value {
+    string value = 1;
+}
+
+message Context {
+    string Context = 1;
+}
+
+message Empty {
+
+}
+
+message DeleteFeedID {
+    string uuid = 1;
+}
+
+service LiveDataService {
+    rpc RegisterOddsApiFeed(OddsApiInfo) returns (FeedIDReturn) {}
+    rpc GetValueOfFeed(FeedIDRequest) returns (Value) {}
+    rpc GetSupportedFeeds(Empty) returns (Context) {}
+    rpc DeleteFeed(DeleteFeedID) returns (Empty) {}
+}

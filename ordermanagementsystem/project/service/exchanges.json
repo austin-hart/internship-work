@@ -1,0 +1,10 @@
+{
+    "SupportedExchanges": {
+        "Polymarket": {
+            "order_types": [
+                "limit",
+                "market"
+            ]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "SupportedFeeds": {
+        "OddsApiInfo": {
+            "rpc": "RegisterOddsAPiFeed",
+            "parameters": {
+                "event_id": {
+                    "type": "string"
+                },
+                "sport": {
+                    "type": "string"
+                },
+                "market": {
+                    "type": "string"
+                }
+            },
+            "value": [
+                "ID",
+                [
+                    "HOME",
+                    "AWAY"
+                ]
+            ],
+            "description": ""
+        }
+    }
+}

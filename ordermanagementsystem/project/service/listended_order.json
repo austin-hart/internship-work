@@ -1,0 +1,14 @@
+{
+    "channel": "orders",
+    "current_size": "600",
+    "id": "0x54a0d9068163e2e9bcca24da8af86479fed0a2d59ee57b618ee1b88b715aed6c",
+    "maker_address": "0xBC241BB040fAd5e3841Df947031494AaE7d81b6c",
+    "market": "16678291189211314787145083999015737376658799626183230671758641503291735614088",
+    "owner": "59206957-edfe-463c-6eff-04bf5e8e3d66",
+    "price": "0.69",
+    "side": "buy",
+    "size": "100",
+    "taker_address": "0x6b0ab7A1E65ea6AE9072f6c45B4261ACDfB30827",
+    "timestamp": "1656612120",
+    "type": "insert"
+}

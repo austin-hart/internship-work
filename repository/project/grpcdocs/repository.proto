@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+message GetRequest {
+    string start_date = 1; // unix timestamp from which to fetch data, if blank it starts at 0
+    string end_date = 2; // unix timestamp to which to fetch data, if blank it defaults to current timestamp
+    string market = 3; // market id to filter for, defaults to none
+    string side = 4; // side to filter for, defaults to none
+    int32 offset = 5; // pagination offset
+}
+
+message GetReturn {
+    string json_data = 1; // json data of the recieved trade
+}
+
+message PostRequest {
+    string json_data = 1; // json data of the trade wanting to post
+}
+
+message PostReturn {
+    string confirmation = 1; // string that tells user if connected succesfully or not
+}
+
+service Repository {
+    rpc GetTrade(GetRequest) returns (GetReturn) {}
+    rpc PostTrade(PostRequest) returns (PostReturn) {}
+}

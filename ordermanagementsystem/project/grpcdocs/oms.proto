@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+message SupportedExchangesGet {
+    
+}
+
+message SupportedExchangesPost {
+    string json_data = 1;
+}
+
+message SupportedMarketsGet {
+    string exchange = 1;
+}
+
+message SupportedMarketsPost {
+    string json_data = 1;
+}
+
+message PlaceOrderGet {
+    string exchange = 1;//	exchange string identifier
+    string market = 2;		//market identifier
+    string side	= 3;	//bid or ask
+    float price	= 4;	//order price if limit
+    float size = 5;		//order size in base asset
+    string kind = 6;	//market or limit
+}
+
+message PlaceOrderPost {
+    string json_data = 1;
+}
+
+message CancelOrderGet {
+    string order_id = 1;
+}
+
+message CancelOrderPost {
+    string json_data = 1;
+}
+
+message OrderStatusGet {
+    string order_id = 1;
+}
+
+message OrderStatusPost {
+    string json_data = 1;
+}
+
+service OrderManagementSystem {
+    rpc GetSupportedExchanges(SupportedExchangesGet) returns (SupportedExchangesPost) {}
+    rpc GetSupportedMarkets(SupportedMarketsGet) returns (SupportedMarketsPost) {}
+    rpc PlaceOrder(PlaceOrderGet) returns (PlaceOrderPost) {}
+    rpc CancelOrder(CancelOrderGet) returns (CancelOrderPost) {}
+    rpc GetOrderStatus(OrderStatusGet) returns (OrderStatusPost) {}
+}

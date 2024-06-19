@@ -1,0 +1,50 @@
+[
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "collateralToken",
+                "type": "address"
+            },
+            {
+                "name": "parentCollectionId",
+                "type": "bytes32"
+            },
+            {
+                "name": "conditionId",
+                "type": "bytes32"
+            },
+            {
+                "name": "partition",
+                "type": "uint256[]"
+            },
+            {
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "splitPosition",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "approved",
+                "type": "bool"
+            }
+        ],
+        "name": "setApprovalForAll",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
