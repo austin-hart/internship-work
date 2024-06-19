@@ -1,2 +1,2 @@
-- include order management system (places orders), live data service (pulls data), and repository (stores data and orders)
-- does not include bot strategy
+- Includes order management system (places orders), live data service (pulls data), and repository (stores data and orders).
+- Does not include bot strategy.
